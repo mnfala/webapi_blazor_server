@@ -1,0 +1,57 @@
+﻿@page "/"
+
+
+<PageTitle>Login</PageTitle>
+
+<script>
+    async function entrar() {
+        debugger;
+        let usuario = document.getElementsByName("usuario")[0].value;
+        let senha = document.getElementsByName("senha")[0].value;
+        let msg = { usuario: usuario, senha: senha };
+
+        let result = await sendJson(msg, "/api/WebApi");
+        if (result.erro != "" && result.erro != null) {
+            alert("Erro: " + result.erro);
+        }
+        else {
+            alert("Usuário autenticado. token: " + result.token);
+        }
+    }
+
+    async function sendJson(obj, url) {
+        try {
+            debugger;
+            let json = JSON.stringify(obj);
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: json
+            }
+            );
+            let result = await response.json();
+            return result;
+        } catch (e) {
+            alert("erro: " + e);
+        }
+    }
+</script>
+
+<div class="container mt-5">
+    <div class="card w-25">
+        <div class="card-header">
+            <h1 class="card-title mb-4">Login</h1>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="usuario" class="mt-2">Usuário</label>
+                <input type="text" class="form-control " name="usuario" placeholder="Nome de usuário...">
+                <label for="senha" class="mt-2">Senha</label>
+                <input type="text" class="form-control" name="senha" placeholder="Senha...">
+            </div>
+            <button class="btn btn-primary mt-2" onclick="entrar();">Enviar</button>
+        </div>
+    </div>
+</div>

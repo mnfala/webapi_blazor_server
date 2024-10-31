@@ -1,0 +1,89 @@
+# Build Folders (you can keep bin if you'd like, to store dlls)
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.log
+*.tlog
+*.ide
+*.cache
+*.pdb
+*.ilk
+*.obj
+*.exe
+*.dll
+*.nupkg
+*.snupkg
+*.psess
+*.vspx
+*.vsp
+*.vspf
+*.vspx
+*.vspscc
+*.vssscc
+*.vsmdi
+*.testsettings
+*.vsdconfig
+*.vsdconfigbk
+*.vspscc
+*.vssscc
+*.vsmdi
+*.testsettings
+*.vsdconfig
+*.vsdconfigbk
+*.vspscc
+*.vssscc
+*.vsmdi
+*.testsettings
+*.vsdconfig
+*.vsdconfigbk
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+.history/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
